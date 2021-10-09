@@ -62,3 +62,43 @@ Now you must import the copied SSH key to the portal.
 
 
 
+# Adding a project to Github Without Github
+
+1. Open the command prompt
+
+2. Change into the directory where your source code is located in the command prompt
+
+3. Create a new repository in this directory
+
+   ```
+   git init
+   ```
+
+4. Add file to your repository. 
+
+   ```
+   git add .  // add all your files
+   ```
+
+5. Commit your changes 
+
+   ```-
+   git commit -m "adding files"
+   ```
+
+   [^-m]: let you add the commit message in line
+
+6. Add a remote location -  the repository should be created in GitHub
+
+   ```
+   git remote origin https://github.com/yoourusername/your-repo-name.git
+   ```
+
+7. Push your commited files
+
+   ```
+   git push -u origin master
+   ```
+
+   
+
