@@ -1,3 +1,13 @@
+# Git command
+
+- cacen last commit but keep changes to worktree
+
+  ```cmd
+  git reset --soft HEAD~1
+  ```
+
+  
+
 # Access github via ssh
 
 github only supports ssh way to read&write the repo, although https way also displayed Read&Write.

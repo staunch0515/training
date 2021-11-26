@@ -9,3 +9,22 @@ function open(path:string,callback?:()=void)=>{
 }
 ```
 
+## PostMessage
+
+```
+window.opener.postMessage({
+	type:"",
+	payload:{
+		screen:screen
+	}
+},'*')
+
+```
+
+## Equal
+
+```javascript
+""?  return false;
+"123"==="123"? return true;
+```
+
