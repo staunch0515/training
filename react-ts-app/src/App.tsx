@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { Route, Switch, Link, useLocation } from 'react-router-dom';
+
+
+import ButtonPage from './mui/button'
+import HomePage from './page/home'
+
+
+function usePageViews() {
+  let location = useLocation();
+  React.useEffect(() => {
+    console.log('page  ' + location.pathname)
+  }, [location])
+}
+
 function App() {
+  usePageViews();
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+          <div>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/button">Button</Link>
+              </li>
+            </ul>
+
+            <hr />
+            <Switch>
+              <Route exact path="/">
+                <HomePage></HomePage>
+              </Route>
+              <Route path="/button">
+                <ButtonPage></ButtonPage>
+              </Route>
+            </Switch>
+          </div>
       </header>
     </div>
   );
 }
+
 
 export default App;
